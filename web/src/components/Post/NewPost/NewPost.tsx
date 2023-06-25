@@ -1,6 +1,7 @@
 import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
+import { AbsoluteCenter, Box, Button, Center } from '@chakra-ui/react'
 
 import PostForm from 'src/components/Post/PostForm'
 
@@ -37,6 +38,18 @@ const NewPost = () => {
       <div className="rw-segment-main">
         <PostForm onSave={onSave} loading={loading} error={error} />
       </div>
+      <Center h="50px">
+        <Button colorScheme="red" size="xs" variant="outline">
+          Chakra Button Test 1
+        </Button>
+      </Center>
+      <Box position="relative" h="100px">
+        <AbsoluteCenter bg="transparent" p="4" color="white" axis="both">
+          <Button colorScheme="red" size="xs" variant="outline">
+            Chakra Button Test 2
+          </Button>
+        </AbsoluteCenter>
+      </Box>
     </div>
   )
 }
